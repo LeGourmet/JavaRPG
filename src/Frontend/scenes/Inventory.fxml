@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--DELON ARTHUR-->
+<?import Frontend.Constantes?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.Scene?>
+<?import java.lang.String?>
+<Scene xmlns:fx="http://javafx.com/fxml/1" fx:id="scene" stylesheets="@../assets/css/Inventory.css"
+       xmlns="http://javafx.com/javafx/11.0.1" fx:controller="Frontend.InventoryController"
+       onKeyPressed="#handleKeyPressed">
+    <fx:define>
+        <String fx:id="sceneName" fx:value="Inventory"/>
+        <ToggleGroup fx:id="Items"/>
+    </fx:define>
+    <Group>
+        <AnchorPane id="body">
+            <prefWidth>
+                <Constantes fx:constant="DEFAULT_WIDTH"/>
+            </prefWidth>
+            <prefHeight>
+                <Constantes fx:constant="DEFAULT_HEIGHT"/>
+            </prefHeight>
+            <Label fx:id="itemDescription" layoutX="366.0" layoutY="492.0" prefHeight="136.0" prefWidth="259.0"
+                   text="Infos:" AnchorPane.bottomAnchor="16.0" AnchorPane.rightAnchor="168.0"/>
+            <Button fx:id="use" layoutX="644.0" layoutY="453.0" onAction="#handleUse" prefHeight="136.0"
+                    prefWidth="136.0" text="Button" AnchorPane.bottomAnchor="16.0" AnchorPane.rightAnchor="16.0"/>
+            <Label fx:id="playerInfo" layoutX="67.0" layoutY="486.0" prefHeight="136.0" prefWidth="338.0" text="Label"
+                   AnchorPane.bottomAnchor="16.0" AnchorPane.leftAnchor="16.0"/>
+            <AnchorPane fx:id="playerSprite" AnchorPane.bottomAnchor="185.0" AnchorPane.leftAnchor="80.0"/>
+            <Label fx:id="secondary" alignment="TOP_LEFT" contentDisplay="RIGHT" layoutX="205.0" layoutY="82.0"
+                   prefHeight="96.0" prefWidth="136.0" text="Label"/>
+            <Label fx:id="primary" alignment="TOP_LEFT" contentDisplay="RIGHT" layoutX="42.0" layoutY="82.0"
+                   prefHeight="96.0" prefWidth="136.0" text="Label"/>
+            <GridPane hgap="34.0" layoutX="394.0" layoutY="48.0" vgap="34.0" AnchorPane.rightAnchor="44.0"
+                      AnchorPane.topAnchor="44.0">
+                <RadioButton prefHeight="64.0" prefWidth="64.0" toggleGroup="$Items">
+                    <padding>
+                        <Insets left="4.0"/>
+                    </padding>
+                </RadioButton>
+                <RadioButton prefHeight="64.0" prefWidth="64.0" toggleGroup="$Items" GridPane.columnIndex="1">
+                    <padding>
+                        <Insets left="4.0"/>
+                    </padding>
+                </RadioButton>
+                <RadioButton prefHeight="64.0" prefWidth="64.0" toggleGroup="$Items" GridPane.columnIndex="2">
+                    <padding>
+                        <Insets left="4.0"/>
+                    </padding>
+                </RadioButton>
+                <RadioButton prefHeight="64.0" prefWidth="64.0" toggleGroup="$Items" GridPane.columnIndex="3">
+                    <padding>
+                        <Insets left="4.0"/>
+                    </padding>
+                </RadioButton>
+                <RadioButton prefHeight="64.0" prefWidth="64.0" toggleGroup="$Items" GridPane.rowIndex="1">
+                    <padding>
+                        <Insets left="4.0"/>
+                    </padding>
+                </RadioButton>
+                <RadioButton prefHeight="64.0" prefWidth="64.0" toggleGroup="$Items" GridPane.columnIndex="1"
+                             GridPane.rowIndex="1">
+                    <padding>
+                        <Insets left="4.0"/>
+                    </padding>
+                </RadioButton>
+                <RadioButton prefHeight="64.0" prefWidth="64.0" toggleGroup="$Items" GridPane.columnIndex="2"
+                             GridPane.rowIndex="1">
+                    <padding>
+                        <Insets left="4.0"/>
+                    </padding>
+                </RadioButton>
+                <RadioButton prefHeight="64.0" prefWidth="64.0" toggleGroup="$Items" GridPane.columnIndex="3"
+                             GridPane.rowIndex="1">
+                    <padding>
+                        <Insets left="4.0"/>
+                    </padding>
+                </RadioButton>
+                <RadioButton prefHeight="64.0" prefWidth="64.0" toggleGroup="$Items" GridPane.rowIndex="2">
+                    <padding>
+                        <Insets left="4.0"/>
+                    </padding>
+                </RadioButton>
+                <RadioButton prefHeight="64.0" prefWidth="64.0" toggleGroup="$Items" GridPane.columnIndex="1"
+                             GridPane.rowIndex="2">
+                    <padding>
+                        <Insets left="4.0"/>
+                    </padding>
+                </RadioButton>
+                <RadioButton prefHeight="64.0" prefWidth="64.0" toggleGroup="$Items" GridPane.columnIndex="2"
+                             GridPane.rowIndex="2">
+                    <padding>
+                        <Insets left="4.0"/>
+                    </padding>
+                </RadioButton>
+                <RadioButton prefHeight="64.0" prefWidth="64.0" toggleGroup="$Items" GridPane.columnIndex="3"
+                             GridPane.rowIndex="2">
+                    <padding>
+                        <Insets left="4.0"/>
+                    </padding>
+                </RadioButton>
+                <RadioButton prefHeight="64.0" prefWidth="64.0" toggleGroup="$Items" GridPane.rowIndex="3">
+                    <padding>
+                        <Insets left="4.0"/>
+                    </padding>
+                </RadioButton>
+                <RadioButton prefHeight="64.0" prefWidth="64.0" toggleGroup="$Items" GridPane.columnIndex="1"
+                             GridPane.rowIndex="3">
+                    <padding>
+                        <Insets left="4.0"/>
+                    </padding>
+                </RadioButton>
+                <RadioButton prefHeight="64.0" prefWidth="64.0" toggleGroup="$Items" GridPane.columnIndex="2"
+                             GridPane.rowIndex="3">
+                    <padding>
+                        <Insets left="4.0"/>
+                    </padding>
+                </RadioButton>
+                <RadioButton prefHeight="64.0" prefWidth="64.0" toggleGroup="$Items" GridPane.columnIndex="3"
+                             GridPane.rowIndex="3">
+                    <padding>
+                        <Insets left="4.0"/>
+                    </padding>
+                </RadioButton>
+                <opaqueInsets>
+                    <Insets/>
+                </opaqueInsets>
+            </GridPane>
+        </AnchorPane>
+    </Group>
+</Scene>

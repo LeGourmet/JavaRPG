@@ -1,0 +1,50 @@
+/*DELON ARTHUR*/
+#body {
+    -fx-background-image: url("../images/UI/InventoryBackground.png");
+}
+
+.radio-button > .radio {
+    -fx-background-color: transparent;
+    -fx-background-insets: 0;
+    -fx-background-radius: 0px;
+    -fx-padding: 0.0em; /* 4 8 4 8 */
+}
+
+.radio-button:selected > .radio > .dot {
+    -fx-background-color: transparent;
+}
+
+.radio-button {
+    -fx-background-image: url("../images/UI/case.png");
+    -fx-border-color: transparent;
+    -fx-border-width: 4px;
+    -fx-border-style: solid;
+}
+
+.radio-button:selected {
+    -fx-background-image: url("../images/UI/selectedcase.png");
+}
+
+.radio-button > .radio > .dot {
+    -fx-padding: 0.0em; /* 4 8 4 8 */
+    -fx-background-color: transparent;
+}
+
+.label {
+    -fx-font-family: "JMHCthulhumbus-Regular";
+    -fx-font-size: 12;
+    -fx-text-fill: #8d7762;
+}
+
+.button {
+    -fx-background-color: transparent;
+    -fx-border-color: none;
+    -fx-border-width: 2;
+    -fx-font-size: 22;
+    -fx-text-fill: #8d7762;
+    -fx-font-family: "JMHCthulhumbus-Regular";
+}
+
+.button:hover {
+    -fx-background-color: rgba(122, 122, 122, .7);
+}

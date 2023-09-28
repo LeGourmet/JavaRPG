@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--DELON ARTHUR-->
+<?import Frontend.Constantes?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.Scene?>
+<?import java.lang.String?>
+<Scene xmlns:fx="http://javafx.com/fxml/1" fx:id="scene" stylesheets="@../assets/css/NextStage.css"
+       xmlns="http://javafx.com/javafx/11.0.1" fx:controller="Frontend.NextStageController"
+       onKeyPressed="#handleKeyPressed">
+    <fx:define>
+        <String fx:id="sceneName" fx:value="NextStage"/>
+        <String fx:id="sceneType" fx:value=""/>
+    </fx:define>
+    <Group>
+        <AnchorPane id="body">
+            <prefWidth>
+                <Constantes fx:constant="DEFAULT_WIDTH"/>
+            </prefWidth>
+            <prefHeight>
+                <Constantes fx:constant="DEFAULT_HEIGHT"/>
+            </prefHeight>
+            <Label fx:id="text" alignment="CENTER" layoutX="229.0" layoutY="189.0" prefHeight="222.0" prefWidth="347.0"
+                   text="label" AnchorPane.bottomAnchor="189.0" AnchorPane.leftAnchor="226.0"
+                   AnchorPane.rightAnchor="226.0" AnchorPane.topAnchor="189.0"/>
+        </AnchorPane>
+    </Group>
+</Scene>

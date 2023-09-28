@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--DELON ARTHUR-->
+<?import Frontend.Constantes?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.Scene?>
+<?import java.lang.String?>
+<Scene xmlns:fx="http://javafx.com/fxml/1" fx:id="scene" stylesheets="@../assets/css/Lobby.css"
+       xmlns="http://javafx.com/javafx/11.0.1" fx:controller="Frontend.LobbyController" onKeyPressed="#handleKeyPressed">
+    <fx:define>
+        <String fx:id="sceneName" fx:value="Lobby"/>
+    </fx:define>
+    <Group>
+        <AnchorPane id="body">
+            <prefWidth>
+                <Constantes fx:constant="DEFAULT_WIDTH"/>
+            </prefWidth>
+            <prefHeight>
+                <Constantes fx:constant="DEFAULT_HEIGHT"/>
+            </prefHeight>
+            <Button contentDisplay="TOP" graphicTextGap="0.0" layoutX="50.0" layoutY="30.0" onAction="#shop" text="SHOP"
+                    AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="30.0">
+                <graphic>
+                    <ImageView fitHeight="72.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                            <Image url="@../assets/images/UI/LobbyShop.png"/>
+                        </image>
+                    </ImageView>
+                </graphic>
+            </Button>
+            <Button contentDisplay="TOP" graphicTextGap="0.0" layoutX="610.0" layoutY="139.0" onAction="#inventory"
+                    text="STUFF" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="30.0">
+                <graphic>
+                    <ImageView fitHeight="90.0" fitWidth="76.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                            <Image url="@../assets/images/UI/LobbyInv.png"/>
+                        </image>
+                    </ImageView>
+                </graphic>
+            </Button>
+            <Button contentDisplay="TOP" graphicTextGap="0.0" layoutX="344.0" layoutY="234.0" onAction="#startGame"
+                    text="PLAY">
+                <graphic>
+                    <ImageView fitHeight="77.0" fitWidth="95.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                            <Image url="@../assets/images/UI/LobbyPlay.png"/>
+                        </image>
+                    </ImageView>
+                </graphic>
+            </Button>
+            <Button contentDisplay="TOP" graphicTextGap="0.0" layoutX="50.0" layoutY="487.0" onAction="#save"
+                    text="SAVE" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="50.0">
+                <graphic>
+                    <ImageView fitHeight="51.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                            <Image url="@../assets/images/UI/LobbySave.png"/>
+                        </image>
+                    </ImageView>
+                </graphic>
+            </Button>
+            <Button contentDisplay="TOP" graphicTextGap="0.0" layoutX="610.0" layoutY="512.0" onAction="#returnMain"
+                    text="MAIN" AnchorPane.bottomAnchor="30.0" AnchorPane.rightAnchor="50.0">
+                <graphic>
+                    <ImageView fitHeight="61.0" fitWidth="103.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                            <Image url="@../assets/images/UI/LobbyMain.png"/>
+                        </image>
+                    </ImageView>
+                </graphic>
+            </Button>
+        </AnchorPane>
+    </Group>
+</Scene>

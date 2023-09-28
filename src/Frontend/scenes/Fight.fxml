@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--DELON ARTHUR-->
+<?import Frontend.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.Scene?>
+<?import java.lang.Boolean?>
+<?import java.lang.String?>
+<Scene xmlns:fx="http://javafx.com/fxml/1" fx:id="scene" stylesheets="@../assets/css/Fight.css"
+       xmlns="http://javafx.com/javafx/11.0.1" fx:controller="Frontend.FightController" onKeyPressed="#handleKeyPressed">
+    <fx:define>
+        <String fx:id="sceneName" fx:value="Fight"/>
+        <Boolean fx:id="canBePaused" fx:value="true"/>
+    </fx:define>
+    <Group>
+        <AnchorPane id="body">
+            <prefWidth>
+                <Constantes fx:constant="DEFAULT_WIDTH"/>
+            </prefWidth>
+            <prefHeight>
+                <Constantes fx:constant="DEFAULT_HEIGHT"/>
+            </prefHeight>
+            <AnchorPane fx:id="playerSpriteBound" prefWidth="256" prefHeight="256" AnchorPane.leftAnchor="35.0"
+                        AnchorPane.bottomAnchor="185.0"/>
+            <AnchorPane fx:id="monsterSpriteBound" prefWidth="256" prefHeight="256" AnchorPane.rightAnchor="35.0"
+                        AnchorPane.bottomAnchor="185.0"/>
+            <HBox id="bottomDrawer" layoutX="6.0" layoutY="492.0" prefHeight="141.0" prefWidth="780.0"
+                  AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
+                <Label fx:id="playerInfo" alignment="TOP_LEFT" prefHeight="141.0" prefWidth="248.0" text="Label"/>
+                <Region prefHeight="141.0" prefWidth="18.0"/>
+                <HBox fx:id="buttons" prefHeight="141.0" prefWidth="248.0">
+                    <Button fx:id="Attack1" prefHeight="105.0" prefWidth="80.0" onAction="#handleSpell0">
+                        <graphic>
+                            <AnchorPane prefHeight="105.0" prefWidth="80.0">
+                                <Label fx:id="attack1Name" alignment="CENTER" layoutX="2.0" layoutY="51.0"
+                                       prefHeight="13.0" prefWidth="76.0" text="Label" underline="true"
+                                       AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="3.0"/>
+                                <ImageView fx:id="attack1Icon" fitHeight="48.0" fitWidth="48.0" layoutX="16.0"
+                                           layoutY="11.0" pickOnBounds="true" preserveRatio="true"
+                                           AnchorPane.leftAnchor="16.0" AnchorPane.rightAnchor="16.0"
+                                           AnchorPane.topAnchor="4.0"/>
+                                <Label fx:id="attack1Cost" contentDisplay="RIGHT" layoutX="2.0" layoutY="85.0"
+                                       prefHeight="16.0" prefWidth="55.0" text="Label" AnchorPane.leftAnchor="6.0"
+                                       AnchorPane.rightAnchor="19.0">
+                                    <graphic>
+                                        <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true"
+                                                   preserveRatio="true">
+                                            <image>
+                                                <Image url="@../assets/images/UI/mana.png"/>
+                                            </image>
+                                        </ImageView>
+                                    </graphic>
+                                </Label>
+                                <Label fx:id="attack1Damage" contentDisplay="RIGHT" layoutX="2.0" layoutY="64.0"
+                                       prefHeight="16.0" prefWidth="55.0" text="Label" AnchorPane.leftAnchor="6.0"
+                                       AnchorPane.rightAnchor="19.0">
+                                    <graphic>
+                                        <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true"
+                                                   preserveRatio="true">
+                                            <image>
+                                                <Image url="@../assets/images/UI/damage.png"/>
+                                            </image>
+                                        </ImageView>
+                                    </graphic>
+                                </Label>
+                            </AnchorPane>
+                        </graphic>
+                    </Button>
+                    <Region prefHeight="200.0" prefWidth="6.0"/>
+                    <Button fx:id="Attack2" prefHeight="105.0" prefWidth="80.0" onAction="#handleSpell1">
+                        <graphic>
+                            <AnchorPane prefHeight="105.0" prefWidth="80.0">
+                                <Label fx:id="attack2Name" alignment="CENTER" layoutX="2.0" layoutY="51.0"
+                                       prefHeight="13.0" prefWidth="76.0" text="Label" underline="true"
+                                       AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="3.0"/>
+                                <ImageView fx:id="attack2Icon" fitHeight="48.0" fitWidth="48.0" layoutX="16.0"
+                                           layoutY="11.0" pickOnBounds="true" preserveRatio="true"
+                                           AnchorPane.leftAnchor="16.0" AnchorPane.rightAnchor="16.0"
+                                           AnchorPane.topAnchor="4.0"/>
+                                <Label fx:id="attack2Cost" contentDisplay="RIGHT" layoutX="2.0" layoutY="85.0"
+                                       prefHeight="16.0" prefWidth="55.0" text="Label" AnchorPane.leftAnchor="6.0"
+                                       AnchorPane.rightAnchor="19.0">
+                                    <graphic>
+                                        <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true"
+                                                   preserveRatio="true">
+                                            <image>
+                                                <Image url="@../assets/images/UI/mana.png"/>
+                                            </image>
+                                        </ImageView>
+                                    </graphic>
+                                </Label>
+                                <Label fx:id="attack2Damage" contentDisplay="RIGHT" layoutX="2.0" layoutY="64.0"
+                                       prefHeight="16.0" prefWidth="55.0" text="Label" AnchorPane.leftAnchor="6.0"
+                                       AnchorPane.rightAnchor="19.0">
+                                    <graphic>
+                                        <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true"
+                                                   preserveRatio="true">
+                                            <image>
+                                                <Image url="@../assets/images/UI/damage.png"/>
+                                            </image>
+                                        </ImageView>
+                                    </graphic>
+                                </Label>
+                            </AnchorPane>
+                        </graphic>
+                    </Button>
+                    <Region prefHeight="200.0" prefWidth="6.0"/>
+                    <Button id="pass" alignment="CENTER" text="Pass" onAction="#pass" prefHeight="141.0"
+                            prefWidth="78.0"/>
+                </HBox>
+                <Region prefHeight="200.0" prefWidth="18.0"/>
+                <Label fx:id="monsterInfo" alignment="TOP_LEFT" prefHeight="141.0" prefWidth="248.0" text="Label"/>
+            </HBox>
+            <AnchorPane id="player" layoutX="14.0" layoutY="23.0" prefHeight="71.0" prefWidth="276.0"
+                        AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="20.0">
+                <ProgressBar fx:id="playerHealthBar" layoutX="70.0" layoutY="18.0" prefHeight="18.0" prefWidth="200.0"
+                             progress="1.0" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="6.0"/>
+                <ProgressBar fx:id="playerManaBar" layoutX="70.0" layoutY="37.0" prefHeight="18.0" prefWidth="200.0"
+                             progress="1.0" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="6.0"/>
+                <Label fx:id="playerName" layoutX="68.0" prefHeight="17.0" prefWidth="200.0" text="PlayerName"
+                       AnchorPane.leftAnchor="68.0"/>
+                <Label fx:id="playerLevel" alignment="CENTER" layoutX="27.0" layoutY="20.0" prefHeight="31.0"
+                       prefWidth="32.0" text="1" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="27.0"
+                       AnchorPane.rightAnchor="220.0" AnchorPane.topAnchor="20.0"/>
+                <Label fx:id="playerHealth" layoutX="158.0" layoutY="19.0" text="Label" AnchorPane.leftAnchor="158.0"/>
+                <Label fx:id="playerMana" layoutX="158.0" layoutY="38.0" text="Label" AnchorPane.leftAnchor="158.0"/>
+            </AnchorPane>
+            <AnchorPane id="monster" layoutX="489.0" layoutY="23.0" prefHeight="71.0" prefWidth="276.0"
+                        AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="20.0">
+                <ProgressBar fx:id="monsterHealthBar" layoutX="6.0" layoutY="17.0" prefHeight="18.0" prefWidth="200.0"
+                             progress="1.0" rotate="180.0" AnchorPane.leftAnchor="6.0" AnchorPane.rightAnchor="70.0"/>
+                <ProgressBar fx:id="monsterManaBar" layoutX="6.0" layoutY="36.0" prefHeight="18.0" prefWidth="200.0"
+                             progress="1.0" rotate="180.0" AnchorPane.leftAnchor="6.0" AnchorPane.rightAnchor="70.0"/>
+                <Label fx:id="monsterName" alignment="CENTER_RIGHT" layoutX="68.0" prefHeight="17.0" prefWidth="200.0"
+                       text="PlayerName" AnchorPane.rightAnchor="68.0"/>
+                <Label fx:id="monsterLevel" alignment="CENTER" layoutX="220.0" layoutY="20.0" prefHeight="31.0"
+                       prefWidth="32.0" text="1" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="220.0"
+                       AnchorPane.rightAnchor="27.0" AnchorPane.topAnchor="20.0"/>
+                <Label fx:id="monsterHealth" layoutX="158.0" layoutY="19.0" text="Label"
+                       AnchorPane.rightAnchor="158.0"/>
+                <Label fx:id="monsterMana" layoutX="158.0" layoutY="38.0" text="Label" AnchorPane.rightAnchor="158.0"/>
+            </AnchorPane>
+        </AnchorPane>
+        <AnchorPane fx:id="pausebody" visible="false">
+            <fx:define>
+                <ToggleGroup fx:id="Items"/>
+            </fx:define>
+            <AnchorPane fx:id="inventory" visible="false">
+                <prefWidth>
+                    <Constantes fx:constant="DEFAULT_WIDTH"/>
+                </prefWidth>
+                <prefHeight>
+                    <Constantes fx:constant="DEFAULT_HEIGHT"/>
+                </prefHeight>
+                <Label fx:id="itemDescription" layoutX="195.0" layoutY="449.0" prefHeight="136.0" prefWidth="259.0"
+                       text="Infos:"/>
+                <Button fx:id="use" layoutX="470.0" layoutY="449.0" onAction="#handleUse" prefHeight="136.0"
+                        prefWidth="136.0" text="Button"/>
+                <GridPane hgap="34.0" layoutX="204.0" layoutY="45.0" vgap="34.0">
+                    <RadioButton prefHeight="64.0" prefWidth="64.0" toggleGroup="$Items">
+                        <graphic>
+                            <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true"/>
+                        </graphic>
+                        <padding>
+                            <Insets left="4.0"/>
+                        </padding>
+                    </RadioButton>
+                    <RadioButton prefHeight="64.0" prefWidth="64.0" toggleGroup="$Items" GridPane.columnIndex="1">
+                        <graphic>
+                            <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true"/>
+                        </graphic>
+                        <padding>
+                            <Insets left="4.0"/>
+                        </padding>
+                    </RadioButton>
+                    <RadioButton prefHeight="64.0" prefWidth="64.0" toggleGroup="$Items" GridPane.columnIndex="2">
+                        <graphic>
+                            <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true"/>
+                        </graphic>
+                        <padding>
+                            <Insets left="4.0"/>
+                        </padding>
+                    </RadioButton>
+                    <RadioButton prefHeight="64.0" prefWidth="64.0" toggleGroup="$Items" GridPane.columnIndex="3">
+                        <graphic>
+                            <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true"/>
+                        </graphic>
+                        <padding>
+                            <Insets left="4.0"/>
+                        </padding>
+                    </RadioButton>
+                    <RadioButton prefHeight="64.0" prefWidth="64.0" toggleGroup="$Items" GridPane.rowIndex="1">
+                        <graphic>
+                            <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true"/>
+                        </graphic>
+                        <padding>
+                            <Insets left="4.0"/>
+                        </padding>
+                    </RadioButton>
+                    <RadioButton prefHeight="64.0" prefWidth="64.0" toggleGroup="$Items" GridPane.columnIndex="1"
+                                 GridPane.rowIndex="1">
+                        <graphic>
+                            <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true"/>
+                        </graphic>
+                        <padding>
+                            <Insets left="4.0"/>
+                        </padding>
+                    </RadioButton>
+                    <RadioButton prefHeight="64.0" prefWidth="64.0" toggleGroup="$Items" GridPane.columnIndex="2"
+                                 GridPane.rowIndex="1">
+                        <graphic>
+                            <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true"/>
+                        </graphic>
+                        <padding>
+                            <Insets left="4.0"/>
+                        </padding>
+                    </RadioButton>
+                    <RadioButton prefHeight="64.0" prefWidth="64.0" toggleGroup="$Items" GridPane.columnIndex="3"
+                                 GridPane.rowIndex="1">
+                        <graphic>
+                            <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true"/>
+                        </graphic>
+                        <padding>
+                            <Insets left="4.0"/>
+                        </padding>
+                    </RadioButton>
+                    <RadioButton prefHeight="64.0" prefWidth="64.0" toggleGroup="$Items" GridPane.rowIndex="2">
+                        <graphic>
+                            <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true"/>
+                        </graphic>
+                        <padding>
+                            <Insets left="4.0"/>
+                        </padding>
+                    </RadioButton>
+                    <RadioButton prefHeight="64.0" prefWidth="64.0" toggleGroup="$Items" GridPane.columnIndex="1"
+                                 GridPane.rowIndex="2">
+                        <graphic>
+                            <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true"/>
+                        </graphic>
+                        <padding>
+                            <Insets left="4.0"/>
+                        </padding>
+                    </RadioButton>
+                    <RadioButton prefHeight="64.0" prefWidth="64.0" toggleGroup="$Items" GridPane.columnIndex="2"
+                                 GridPane.rowIndex="2">
+                        <graphic>
+                            <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true"/>
+                        </graphic>
+                        <padding>
+                            <Insets left="4.0"/>
+                        </padding>
+                    </RadioButton>
+                    <RadioButton prefHeight="64.0" prefWidth="64.0" toggleGroup="$Items" GridPane.columnIndex="3"
+                                 GridPane.rowIndex="2">
+                        <graphic>
+                            <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true"/>
+                        </graphic>
+                        <padding>
+                            <Insets left="4.0"/>
+                        </padding>
+                    </RadioButton>
+                    <RadioButton prefHeight="64.0" prefWidth="64.0" toggleGroup="$Items" GridPane.rowIndex="3">
+                        <graphic>
+                            <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true"/>
+                        </graphic>
+                        <padding>
+                            <Insets left="4.0"/>
+                        </padding>
+                    </RadioButton>
+                    <RadioButton prefHeight="64.0" prefWidth="64.0" toggleGroup="$Items" GridPane.columnIndex="1"
+                                 GridPane.rowIndex="3">
+                        <graphic>
+                            <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true"/>
+                        </graphic>
+                        <padding>
+                            <Insets left="4.0"/>
+                        </padding>
+                    </RadioButton>
+                    <RadioButton prefHeight="64.0" prefWidth="64.0" toggleGroup="$Items" GridPane.columnIndex="2"
+                                 GridPane.rowIndex="3">
+                        <graphic>
+                            <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true"/>
+                        </graphic>
+                        <padding>
+                            <Insets left="4.0"/>
+                        </padding>
+                    </RadioButton>
+                    <RadioButton prefHeight="64.0" prefWidth="64.0" toggleGroup="$Items" GridPane.columnIndex="3"
+                                 GridPane.rowIndex="3">
+                        <graphic>
+                            <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true"/>
+                        </graphic>
+                        <padding>
+                            <Insets left="4.0"/>
+                        </padding>
+                    </RadioButton>
+                </GridPane>
+            </AnchorPane>
+            <AnchorPane fx:id="pause" visible="false">
+                <prefWidth>
+                    <Constantes fx:constant="DEFAULT_WIDTH"/>
+                </prefWidth>
+                <prefHeight>
+                    <Constantes fx:constant="DEFAULT_HEIGHT"/>
+                </prefHeight>
+                <VBox alignment="CENTER" layoutX="314.0" layoutY="108.0" prefHeight="385.0" prefWidth="172.0"
+                      AnchorPane.bottomAnchor="108.0" AnchorPane.leftAnchor="314.0" AnchorPane.rightAnchor="314.0"
+                      AnchorPane.topAnchor="108.0">
+                    <Button onAction="#handleResume" prefWidth="172.0" text="Resume" VBox.vgrow="ALWAYS"/>
+                    <Region VBox.vgrow="ALWAYS"/>
+                    <Button onAction="#handleInv" prefWidth="172.0" text="Stuff" VBox.vgrow="ALWAYS"/>
+                    <Region VBox.vgrow="ALWAYS"/>
+                    <Button onAction="#handleRestart" prefHeight="56.0" prefWidth="172.0" text="Restart"
+                            VBox.vgrow="ALWAYS"/>
+                    <Region VBox.vgrow="ALWAYS"/>
+                    <Button onAction="#handleMain" prefWidth="172.0" text="Main" VBox.vgrow="ALWAYS"/>
+                    <Region VBox.vgrow="ALWAYS"/>
+                    <Button onAction="#handleExit" prefWidth="172.0" text="Exit" VBox.vgrow="ALWAYS"/>
+                </VBox>
+            </AnchorPane>
+        </AnchorPane>
+    </Group>
+</Scene>

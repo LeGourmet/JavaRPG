@@ -1,0 +1,27 @@
+Save2 : Allan barbare de niveau 25
+Guerrier_Epee
+Allan
+582
+582
+40
+40
+10
+25
+1217
+listArmes;1
+Epee;45;600;Thanatos;20
+Inventaire;16;6
+Bouclier;18;600;Egide;20
+Arc;90;15;600;Aile du corbeau;20;true
+Arc;150;15;3750;Gandiva;50;true
+Epee;75;3750;Deuille-givre;50
+PopoMana;0.5;40
+Bouclier;30;3750;Yata-no-Kagami;50
+218
+listChecks;6
+true
+true
+true
+false
+false
+false

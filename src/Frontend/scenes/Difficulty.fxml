@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--DELON ARTHUR-->
+<?import Frontend.Constantes?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.Scene?>
+<?import java.lang.Boolean?>
+<?import java.lang.String?>
+<Scene xmlns:fx="http://javafx.com/fxml/1" fx:id="scene" stylesheets="@../assets/css/Difficulty.css"
+       xmlns="http://javafx.com/javafx/11.0.1" fx:controller="Frontend.DifficultyController"
+       onKeyPressed="#handleKeyPressed">
+    <fx:define>
+        <String fx:id="sceneName" fx:value="Difficulty"/>
+        <Boolean fx:id="canBePaused" fx:value="false"/>
+    </fx:define>
+    <Group>
+        <AnchorPane id="body">
+            <prefWidth>
+                <Constantes fx:constant="DEFAULT_WIDTH"/>
+            </prefWidth>
+            <prefHeight>
+                <Constantes fx:constant="DEFAULT_HEIGHT"/>
+            </prefHeight>
+            <Group layoutX="70.0" layoutY="40.0" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="70.0"
+                   AnchorPane.topAnchor="40.0">
+                <Label alignment="CENTER" prefHeight="58.0" prefWidth="270.0" text="Easy" underline="true"/>
+                <VBox layoutY="85.0" prefHeight="390.0" prefWidth="270.0">
+                    <Button alignment="CENTER_RIGHT" contentDisplay="RIGHT" graphicTextGap="108.0"
+                            onAction="#playLevel0" prefHeight="75.0" prefWidth="287.0" text="Crypte"
+                            VBox.vgrow="ALWAYS">
+                        <graphic>
+                            <CheckBox fx:id="level0" alignment="CENTER" contentDisplay="CENTER" disable="true"
+                                      prefWidth="7.0"/>
+                        </graphic>
+                    </Button>
+                    <Region VBox.vgrow="ALWAYS"/>
+                    <Button alignment="CENTER_RIGHT" contentDisplay="RIGHT" graphicTextGap="55.0" onAction="#playLevel1"
+                            prefHeight="75.0" prefWidth="281.0" text="Les Enfers" VBox.vgrow="ALWAYS">
+                        <graphic>
+                            <CheckBox fx:id="level1" alignment="CENTER" contentDisplay="CENTER" disable="true"
+                                      prefWidth="7.0"/>
+                        </graphic>
+                    </Button>
+                    <Region VBox.vgrow="ALWAYS"/>
+                    <Button alignment="CENTER_RIGHT" contentDisplay="RIGHT" graphicTextGap="12.0" onAction="#playLevel2"
+                            prefHeight="93.0" prefWidth="270.0" text="Les chevaliers&#10;de l'apocalypse"
+                            VBox.vgrow="ALWAYS">
+                        <graphic>
+                            <CheckBox fx:id="level2" alignment="CENTER" contentDisplay="CENTER" disable="true"
+                                      prefWidth="7.0"/>
+                        </graphic>
+                    </Button>
+                    <Region prefWidth="270.0" VBox.vgrow="ALWAYS"/>
+                </VBox>
+            </Group>
+            <Group layoutX="463.0" layoutY="40.0" AnchorPane.bottomAnchor="40.0" AnchorPane.rightAnchor="70.0"
+                   AnchorPane.topAnchor="40.0">
+                <Label alignment="CENTER" prefHeight="58.0" prefWidth="270.0" text="Hard" underline="true"/>
+                <VBox layoutY="85.0" prefHeight="390.0" prefWidth="270.0">
+                    <Button alignment="CENTER_RIGHT" contentDisplay="RIGHT" graphicTextGap="108.0"
+                            onAction="#playLevel3" prefHeight="75.0" prefWidth="287.0" text="Crypte"
+                            VBox.vgrow="ALWAYS">
+                        <graphic>
+                            <CheckBox fx:id="level3" alignment="CENTER" contentDisplay="CENTER" disable="true"
+                                      prefWidth="7.0"/>
+                        </graphic>
+                    </Button>
+                    <Region VBox.vgrow="ALWAYS"/>
+                    <Button alignment="CENTER_RIGHT" contentDisplay="RIGHT" graphicTextGap="55.0" onAction="#playLevel4"
+                            prefHeight="75.0" prefWidth="281.0" text="Les Enfers" VBox.vgrow="ALWAYS">
+                        <graphic>
+                            <CheckBox fx:id="level4" alignment="CENTER" contentDisplay="CENTER" disable="true"
+                                      prefWidth="7.0"/>
+                        </graphic>
+                    </Button>
+                    <Region VBox.vgrow="ALWAYS"/>
+                    <Button alignment="CENTER_RIGHT" contentDisplay="RIGHT" graphicTextGap="12.0" onAction="#playLevel5"
+                            prefHeight="93.0" prefWidth="270.0" text="Les chevaliers&#10;de l'apocalypse"
+                            VBox.vgrow="ALWAYS">
+                        <graphic>
+                            <CheckBox fx:id="level5" alignment="CENTER" contentDisplay="CENTER" disable="true"
+                                      prefWidth="7.0"/>
+                        </graphic>
+                    </Button>
+                    <Region VBox.vgrow="ALWAYS"/>
+                </VBox>
+            </Group>
+        </AnchorPane>
+    </Group>
+</Scene>

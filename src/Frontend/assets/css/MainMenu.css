@@ -1,0 +1,17 @@
+/*DELON ARTHUR*/
+#body {
+    -fx-background-image: url("../images/UI/AccueilBackground.png");
+}
+
+.button {
+    -fx-background-color: rgba(122, 122, 122, .5);
+    -fx-border-color: none;
+    -fx-border-width: 2;
+    -fx-font-size: 26;
+    -fx-text-fill: #000000;
+    -fx-font-family: "JMHCthulhumbus-Regular";
+}
+
+.button:hover {
+    -fx-background-color: rgba(122, 122, 122, .7);
+}

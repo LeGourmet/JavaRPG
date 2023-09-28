@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--DELON ARTHUR-->
+<?import Frontend.Constantes?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.Scene?>
+<?import java.lang.String?>
+<Scene xmlns:fx="http://javafx.com/fxml/1" fx:id="scene" stylesheets="@../assets/css/Shop.css"
+       xmlns="http://javafx.com/javafx/11.0.1" fx:controller="Frontend.ShopController"
+       onKeyPressed="#handleKeyPressed">
+    <fx:define>
+        <String fx:id="sceneName" fx:value="Shop"/>
+        <ToggleGroup fx:id="Items"/>
+    </fx:define>
+    <Group>
+        <AnchorPane id="body">
+            <prefWidth>
+                <Constantes fx:constant="DEFAULT_WIDTH"/>
+            </prefWidth>
+            <prefHeight>
+                <Constantes fx:constant="DEFAULT_HEIGHT"/>
+            </prefHeight>
+            <Label fx:id="itemDescription" layoutX="366.0" layoutY="492.0" prefHeight="136.0" prefWidth="259.0"
+                   text="Infos:" AnchorPane.bottomAnchor="16.0" AnchorPane.rightAnchor="168.0"/>
+            <Button fx:id="use" layoutX="644.0" layoutY="453.0" onAction="#handleSell" prefHeight="136.0"
+                    prefWidth="136.0" text="Sell" AnchorPane.bottomAnchor="16.0" AnchorPane.rightAnchor="16.0"/>
+            <GridPane hgap="34.0" layoutX="394.0" layoutY="48.0" vgap="34.0" AnchorPane.rightAnchor="44.0"
+                      AnchorPane.topAnchor="44.0">
+                <RadioButton prefHeight="64.0" prefWidth="64.0" toggleGroup="$Items">
+                    <padding>
+                        <Insets left="4.0"/>
+                    </padding>
+                </RadioButton>
+                <RadioButton prefHeight="64.0" prefWidth="64.0" toggleGroup="$Items" GridPane.columnIndex="1">
+                    <padding>
+                        <Insets left="4.0"/>
+                    </padding>
+                </RadioButton>
+                <RadioButton prefHeight="64.0" prefWidth="64.0" toggleGroup="$Items" GridPane.columnIndex="2">
+                    <padding>
+                        <Insets left="4.0"/>
+                    </padding>
+                </RadioButton>
+                <RadioButton prefHeight="64.0" prefWidth="64.0" toggleGroup="$Items" GridPane.columnIndex="3">
+                    <padding>
+                        <Insets left="4.0"/>
+                    </padding>
+                </RadioButton>
+                <RadioButton prefHeight="64.0" prefWidth="64.0" toggleGroup="$Items" GridPane.rowIndex="1">
+                    <padding>
+                        <Insets left="4.0"/>
+                    </padding>
+                </RadioButton>
+                <RadioButton prefHeight="64.0" prefWidth="64.0" toggleGroup="$Items" GridPane.columnIndex="1"
+                             GridPane.rowIndex="1">
+                    <padding>
+                        <Insets left="4.0"/>
+                    </padding>
+                </RadioButton>
+                <RadioButton prefHeight="64.0" prefWidth="64.0" toggleGroup="$Items" GridPane.columnIndex="2"
+                             GridPane.rowIndex="1">
+                    <padding>
+                        <Insets left="4.0"/>
+                    </padding>
+                </RadioButton>
+                <RadioButton prefHeight="64.0" prefWidth="64.0" toggleGroup="$Items" GridPane.columnIndex="3"
+                             GridPane.rowIndex="1">
+                    <padding>
+                        <Insets left="4.0"/>
+                    </padding>
+                </RadioButton>
+                <RadioButton prefHeight="64.0" prefWidth="64.0" toggleGroup="$Items" GridPane.rowIndex="2">
+                    <padding>
+                        <Insets left="4.0"/>
+                    </padding>
+                </RadioButton>
+                <RadioButton prefHeight="64.0" prefWidth="64.0" toggleGroup="$Items" GridPane.columnIndex="1"
+                             GridPane.rowIndex="2">
+                    <padding>
+                        <Insets left="4.0"/>
+                    </padding>
+                </RadioButton>
+                <RadioButton prefHeight="64.0" prefWidth="64.0" toggleGroup="$Items" GridPane.columnIndex="2"
+                             GridPane.rowIndex="2">
+                    <padding>
+                        <Insets left="4.0"/>
+                    </padding>
+                </RadioButton>
+                <RadioButton prefHeight="64.0" prefWidth="64.0" toggleGroup="$Items" GridPane.columnIndex="3"
+                             GridPane.rowIndex="2">
+                    <padding>
+                        <Insets left="4.0"/>
+                    </padding>
+                </RadioButton>
+                <RadioButton prefHeight="64.0" prefWidth="64.0" toggleGroup="$Items" GridPane.rowIndex="3">
+                    <padding>
+                        <Insets left="4.0"/>
+                    </padding>
+                </RadioButton>
+                <RadioButton prefHeight="64.0" prefWidth="64.0" toggleGroup="$Items" GridPane.columnIndex="1"
+                             GridPane.rowIndex="3">
+                    <padding>
+                        <Insets left="4.0"/>
+                    </padding>
+                </RadioButton>
+                <RadioButton prefHeight="64.0" prefWidth="64.0" toggleGroup="$Items" GridPane.columnIndex="2"
+                             GridPane.rowIndex="3">
+                    <padding>
+                        <Insets left="4.0"/>
+                    </padding>
+                </RadioButton>
+                <RadioButton prefHeight="64.0" prefWidth="64.0" toggleGroup="$Items" GridPane.columnIndex="3"
+                             GridPane.rowIndex="3">
+                    <padding>
+                        <Insets left="4.0"/>
+                    </padding>
+                </RadioButton>
+            </GridPane>
+            <AnchorPane layoutX="71.0" layoutY="74.0">
+                <Label fx:id="potionDesc" layoutX="6.0" layoutY="76.0" prefHeight="96.0" prefWidth="226.0" text="Label"
+                       AnchorPane.topAnchor="76.0"/>
+                <Button fx:id="potionReroll" layoutX="140.0" onAction="#handleRerollPotion" text="REROLL"
+                        AnchorPane.bottomAnchor="147.0" AnchorPane.leftAnchor="120.0" AnchorPane.rightAnchor="45.0"
+                        AnchorPane.topAnchor="0.0"/>
+                <Button fx:id="potionBuy" layoutX="149.0" layoutY="37.0" onAction="#handleBuyPotion" text="BUY"
+                        AnchorPane.bottomAnchor="115.0" AnchorPane.rightAnchor="52.0"/>
+                <Pane id="cell" layoutX="37.0" prefHeight="64.0" prefWidth="64.0">
+                    <ImageView fx:id="potionIcon" fitHeight="48.0" fitWidth="48.0" layoutX="8.0" layoutY="8.0"
+                               pickOnBounds="true" preserveRatio="true"/>
+                </Pane>
+            </AnchorPane>
+            <AnchorPane layoutX="71.0" layoutY="357.0">
+                <Label fx:id="armeDesc" layoutX="6.0" layoutY="76.0" prefHeight="96.0" prefWidth="226.0" text="Label"
+                       AnchorPane.topAnchor="76.0"/>
+                <Button fx:id="armeReroll" layoutX="140.0" onAction="#handleRerollArme" text="REROLL"
+                        AnchorPane.bottomAnchor="147.0" AnchorPane.leftAnchor="120.0" AnchorPane.rightAnchor="40.0"
+                        AnchorPane.topAnchor="0.0"/>
+                <Button fx:id="armeBuy" layoutX="149.0" layoutY="37.0" onAction="#handleBuyArme" text="BUY"
+                        AnchorPane.bottomAnchor="110.0" AnchorPane.rightAnchor="52.0"/>
+                <Pane id="cell" layoutX="37.0" prefHeight="64.0" prefWidth="64.0">
+                    <ImageView fx:id="armeIcon" fitHeight="48.0" fitWidth="48.0" layoutX="8.0" layoutY="8.0"
+                               pickOnBounds="true" preserveRatio="true"/>
+                </Pane>
+            </AnchorPane>
+            <Label fx:id="coins" layoutX="114.0" layoutY="529.0" prefHeight="17.0" prefWidth="147.0" text="Test"
+                   AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="160.0">
+                <graphic>
+                    <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                            <Image url="@../assets/images/items/sous.png"/>
+                        </image>
+                    </ImageView>
+                </graphic>
+            </Label>
+        </AnchorPane>
+    </Group>
+</Scene>

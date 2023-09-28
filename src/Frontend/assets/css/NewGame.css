@@ -1,0 +1,67 @@
+/*DELON ARTHUR*/
+#body {
+    -fx-background-image: url("../images/UI/backgroung1.png");
+    -fx-background-size: cover;
+}
+
+.button {
+    -fx-background-color: transparent;
+    -fx-border-color: none;
+    -fx-border-width: 2;
+    -fx-font-size: 26;
+    -fx-font-family: "JMHCthulhumbus-Regular";
+}
+
+.button:hover {
+    -fx-background-color: rgba(122, 122, 122, .7);
+}
+
+.radio-button > .radio {
+    -fx-background-color: transparent;
+    -fx-background-insets: 0;
+    -fx-background-radius: 0px;
+    -fx-padding: 0.0em; /* 4 8 4 8 */
+}
+
+.radio-button:selected > .radio > .dot {
+    -fx-background-color: transparent;
+}
+
+.radio-button {
+    -fx-border-color: transparent;
+    -fx-border-width: 4px;
+    -fx-border-style: solid;
+}
+
+.radio-button:selected {
+    -fx-border-width: 0px;
+}
+
+.radio-button > .radio > .dot {
+    -fx-padding: 0.0em; /* 4 8 4 8 */
+    -fx-background-color: transparent;
+}
+
+#classSel {
+    -fx-background-color: #FFFF00;
+}
+
+#warriorClass #classSel {
+    -fx-background-image: url("../images/UI/barbare.png");
+    -fx-background-size: cover;
+}
+
+#shieldWarClass #classSel {
+    -fx-background-image: url("../images/UI/chevalier.png");
+    -fx-background-size: cover;
+}
+
+#hunterClass #classSel {
+    -fx-background-image: url("../images/UI/chasseur.png");
+    -fx-background-size: cover;
+}
+
+#mageClass #classSel {
+    -fx-background-image: url("../images/UI/magicien.png");
+    -fx-background-size: cover;
+}

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--DELON ARTHUR-->
+<?import Frontend.Constantes?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.Scene?>
+<?import java.lang.String?>
+<Scene xmlns:fx="http://javafx.com/fxml/1" fx:id="scene" stylesheets="@../assets/css/NewGame.css"
+       xmlns="http://javafx.com/javafx/11.0.1" fx:controller="Frontend.NewGameController" onKeyPressed="#handleKeyPressed">
+    <fx:define>
+        <String fx:id="sceneName" fx:value="NewGame"/>
+        <ToggleGroup fx:id="ClassSelector"/>
+    </fx:define>
+    <Group>
+        <AnchorPane id="body">
+            <prefWidth>
+                <Constantes fx:constant="DEFAULT_WIDTH"/>
+            </prefWidth>
+            <prefHeight>
+                <Constantes fx:constant="DEFAULT_HEIGHT"/>
+            </prefHeight>
+            <ImageView fitHeight="106.0" fitWidth="376.0" layoutX="243.0" layoutY="14.0" pickOnBounds="true"
+                       preserveRatio="true" AnchorPane.leftAnchor="215.0" AnchorPane.rightAnchor="215.0"
+                       AnchorPane.topAnchor="0.0">
+                <image>
+                    <Image url="@../assets/images/UI/newGameHeader.png"/>
+                </image>
+            </ImageView>
+            <HBox AnchorPane.bottomAnchor="149.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0"
+                  AnchorPane.topAnchor="125.0">
+                <RadioButton id="warriorClass" prefHeight="400.0" prefWidth="189.0" toggleGroup="$ClassSelector">
+                    <graphic>
+                        <AnchorPane id="classSel"/>
+                    </graphic>
+                </RadioButton>
+                <Region prefWidth="8.0"/>
+                <RadioButton id="shieldWarClass" prefHeight="400.0" prefWidth="189.0" toggleGroup="$ClassSelector">
+                    <graphic>
+                        <AnchorPane id="classSel"/>
+                    </graphic>
+                </RadioButton>
+                <Region prefWidth="8.0"/>
+                <RadioButton id="hunterClass" prefHeight="400.0" prefWidth="189.0" toggleGroup="$ClassSelector">
+                    <graphic>
+                        <AnchorPane id="classSel"/>
+                    </graphic>
+                </RadioButton>
+                <Region prefWidth="8.0"/>
+                <RadioButton id="mageClass" prefHeight="400.0" prefWidth="189.0" toggleGroup="$ClassSelector">
+                    <graphic>
+                        <AnchorPane id="classSel"/>
+                    </graphic>
+                </RadioButton>
+            </HBox>
+            <Button fx:id="play" AnchorPane.leftAnchor="335.0" AnchorPane.rightAnchor="335.0"
+                    AnchorPane.bottomAnchor="10.0" layoutX="381.0" layoutY="541.0" text="Play"
+                    onAction="#createPlayer"/>
+            <TextField fx:id="name" alignment="CENTER" layoutX="326.0" layoutY="483.0" promptText="Nom"
+                       AnchorPane.leftAnchor="326.0" AnchorPane.rightAnchor="326.0"/>
+        </AnchorPane>
+    </Group>
+</Scene>

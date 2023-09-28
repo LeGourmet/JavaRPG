@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--DELON ARTHUR-->
+<?import Frontend.Constantes?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.Scene?>
+<?import java.lang.String?>
+<Scene xmlns:fx="http://javafx.com/fxml/1" fx:id="scene" stylesheets="@../assets/css/LoadGame.css"
+       xmlns="http://javafx.com/javafx/11.0.1" fx:controller="Frontend.LoadGameController" onKeyPressed="#handleKeyPressed">
+    <fx:define>
+        <String fx:id="sceneName" fx:value="LoadGame"/>
+        <ToggleGroup fx:id="Saves"/>
+    </fx:define>
+    <Group>
+        <AnchorPane id="body">
+            <prefWidth>
+                <Constantes fx:constant="DEFAULT_WIDTH"/>
+            </prefWidth>
+            <prefHeight>
+                <Constantes fx:constant="DEFAULT_HEIGHT"/>
+            </prefHeight>
+            <VBox layoutX="175.0" layoutY="80.0" prefHeight="441.0" prefWidth="450.0" AnchorPane.bottomAnchor="80.0"
+                  AnchorPane.leftAnchor="175.0" AnchorPane.rightAnchor="175.0" AnchorPane.topAnchor="80.0">
+                <RadioButton id="Save1" prefHeight="70.0" prefWidth="450.0" text="Save1" toggleGroup="$Saves"
+                             VBox.vgrow="ALWAYS">
+                    <graphic>
+                        <Button id="Save1" text="X" onAction="#handleFDelete"/>
+                    </graphic>
+                </RadioButton>
+                <Region VBox.vgrow="ALWAYS"/>
+                <RadioButton id="Save2" prefHeight="70.0" prefWidth="450.0" text="Save2" toggleGroup="$Saves"
+                             VBox.vgrow="ALWAYS">
+                    <graphic>
+                        <Button id="Save2" text="X" onAction="#handleFDelete"/>
+                    </graphic>
+                </RadioButton>
+                <Region VBox.vgrow="ALWAYS"/>
+                <RadioButton id="Save3" prefHeight="70.0" prefWidth="450.0" text="Save3" toggleGroup="$Saves"
+                             VBox.vgrow="ALWAYS">
+                    <graphic>
+                        <Button id="Save3" text="X" onAction="#handleFDelete"/>
+                    </graphic>
+                </RadioButton>
+                <Region VBox.vgrow="ALWAYS"/>
+                <RadioButton id="Save4" prefHeight="70.0" prefWidth="450.0" text="Save4" toggleGroup="$Saves"
+                             VBox.vgrow="ALWAYS">
+                    <graphic>
+                        <Button id="Save4" text="X" onAction="#handleFDelete"/>
+                    </graphic>
+                </RadioButton>
+            </VBox>
+            <Button fx:id="play" layoutX="359.0" layoutY="520.0" text="Play" onAction="#handlePlay"/>
+        </AnchorPane>
+    </Group>
+</Scene>

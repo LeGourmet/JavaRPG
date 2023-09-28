@@ -1,0 +1,122 @@
+/*DELON ARTHUR*/
+#body {
+    -fx-background-image: url("../images/UI/bgFight.png");
+    -fx-background-size: cover;
+}
+
+.button {
+    -fx-background-color: transparent;
+    -fx-border-color: none;
+    -fx-border-width: 2;
+    -fx-font-size: 26;
+    -fx-font-family: "JMHCthulhumbus-Regular";
+}
+
+.button:hover {
+    -fx-background-color: rgba(122, 122, 122, .7);
+}
+
+.label {
+    -fx-font-family: "JMHCthulhumbus-Regular";
+    -fx-font-size: 9;
+    -fx-text-fill: #8d7762;
+}
+
+#monsterHealth {
+    -fx-text-fill: #FFF;
+}
+
+#playerHealth {
+    -fx-text-fill: #FFF;
+}
+
+#playerMana {
+    -fx-text-fill: #FFF;
+}
+
+#monsterMana {
+    -fx-text-fill: #FFF;
+}
+
+#pausebody {
+    -fx-background-image: url("../images/UI/pauseBG.png");
+    -fx-background-size: cover;
+}
+
+#inventory {
+    -fx-background-image: url("../images/UI/UseItemBackground.png");
+}
+
+.radio-button > .radio {
+    -fx-background-color: transparent;
+    -fx-background-insets: 0;
+    -fx-background-radius: 0px;
+    -fx-padding: 0.0em; /* 4 8 4 8 */
+}
+
+.radio-button:selected > .radio > .dot {
+    -fx-background-color: transparent;
+}
+
+.radio-button {
+    -fx-background-image: url("../images/UI/case.png");
+    -fx-border-color: transparent;
+    -fx-border-width: 4px;
+    -fx-border-style: solid;
+}
+
+.radio-button:selected {
+    -fx-background-image: url("../images/UI/selectedcase.png");
+}
+
+.radio-button > .radio > .dot {
+    -fx-padding: 0.0em; /* 4 8 4 8 */
+    -fx-background-color: transparent;
+}
+
+#bottomDrawer {
+    -fx-background-image: url("../images/UI/backgrounddrawer.png");
+    -fx-padding: 18 25 18 25;
+}
+
+
+#playerName {
+    -fx-font-size: 14;
+}
+
+#monsterName {
+    -fx-font-size: 14;
+}
+
+.progress-bar > .track {
+    -fx-background-color: transparent;
+    -fx-text-box-border: transparent;
+    -fx-control-inner-background: transparent;
+}
+
+.progress-bar > .track {
+    -fx-background-color: transparent;
+    -fx-text-box-border: transparent;
+    -fx-control-inner-background: transparent;
+}
+
+
+#playerHealthBar .bar {
+    -fx-accent: red;
+}
+
+#monsterHealthBar .bar {
+    -fx-accent: red;
+}
+
+#player {
+    -fx-background-image: url("../images/UI/playerBackground.png");
+}
+
+#monster {
+    -fx-background-image: url("../images/UI/monsterBackground.png");
+}
+
+#pass {
+    -fx-font-size: 18;
+}
